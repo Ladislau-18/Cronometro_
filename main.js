@@ -46,9 +46,12 @@ function mostrar() {
     storage_cut.push(corte);
     mostrar_corte.innerHTML = ""; 
     storage_cut.forEach((item, index) => {
-        mostrar_corte.innerHTML += `<span># ${index + 1}</span><span>${item}</span>`;
+        mostrar_corte.innerHTML += `<div id="each-cut">
+        <span>#${index + 1}</span><span>${item}</span>
+        </div>`;
     });
 }
+
 
 function resetTimer() {
     running = false;

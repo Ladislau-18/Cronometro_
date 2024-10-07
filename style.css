@@ -53,7 +53,6 @@ body{
 	width: 75px;
 	height: 75px;
 	color: green;
-	
 }
 #cut_reset{
 	background: #292A2F;
@@ -63,11 +62,35 @@ body{
 	height: 75px;
 	color: gray;
 }
-
+/*
 #mostrar_corte{
 	display: flex;
+	align-items: start;
 	justify-content: space-around;
 	background: #292A2F;
 	color: #969696;
 	height: 100vh;
+	
 }
+
+*/
+#mostrar_corte {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: flex-start;
+    background: #292A2F;
+    color: #969696;
+    height: 100%;
+    padding: 0px; 
+}
+
+#mostrar_corte span {
+    margin: 5px 0; 
+}
+#each-cut{
+	display: flex;
+	justify-content: space-between;
+	width: 50%;
+}
+
