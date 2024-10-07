@@ -42,11 +42,12 @@ function capturar() {
     }
 }
 
-function mostrar() {
+	function mostrar() {
     storage_cut.push(corte);
     mostrar_corte.innerHTML = ""; 
     storage_cut.forEach((item, index) => {
-        mostrar_corte.innerHTML += `<div id="each-cut">
+        let classe = (index % 2 === 0) ? 'corte_par' : 'corte_impar';
+        mostrar_corte.innerHTML += `<div id="each_cut" class="${classe}">
         <span>#${index + 1}</span><span>${item}</span>
         </div>`;
     });

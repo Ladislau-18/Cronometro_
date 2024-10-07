@@ -88,9 +88,14 @@ body{
 #mostrar_corte span {
     margin: 5px 0; 
 }
-#each-cut{
+#each_cut{
 	display: flex;
-	justify-content: space-between;
-	width: 50%;
+	justify-content: space-evenly;
+	width: 100%;
 }
-
+.corte_par{
+	background: #292A2F;
+}
+.corte_impar {
+	background: #515152;
+}
