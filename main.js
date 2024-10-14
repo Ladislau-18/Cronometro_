@@ -12,6 +12,7 @@ function startTimer() {
     if (running === true) {
         clearInterval(interval);
         running = false;
+        document.querySelector("#num").innerHTML = '<span>Contagem</span><span>tempo</span>'
         start_stop.innerHTML = `Iniciar`
         cut_reset.innerHTML = `Reset`
     } else if (!running) {
@@ -37,7 +38,7 @@ function startTimer() {
 function capturar() {
     if (cut_reset.disabled == false && running == true) {
         mostrar();
-        document.querySelector("#num").classList.add("showNum")
+        document.querySelector("#num").innerHTML = '<span>Contagem</span><span>tempo</span>'
     } else {
         resetTimer();
     }
@@ -65,7 +66,7 @@ function resetTimer() {
     storage_cut = []; 
     mostrar_corte.innerHTML = "";
     tempo.textContent = "00:00.00";
-    document.querySelector("#num").classList.remove("showNum")
+    document.querySelector("#num").innerHTML = ''
 
 }
 

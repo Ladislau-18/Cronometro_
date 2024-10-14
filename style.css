@@ -75,11 +75,10 @@ hr{
 
 #num{
 	color: white;
+	display: flex;
 	justify-content: space-evenly;
 }
-.showNum{
-	display: flex;
-}
+
 #mostrar_corte {
     display: flex;
     flex-direction: column; 
