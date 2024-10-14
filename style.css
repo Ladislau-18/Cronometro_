@@ -4,6 +4,7 @@ body{
 	margin: 0;
 	padding: 0;
 	background: #1F1F1F;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #main{
@@ -13,7 +14,7 @@ body{
 }
 
 #container{
-	display: flex;	
+	display: block;	
 	justify-content: space-around ;
 	
 }
@@ -37,43 +38,48 @@ body{
 }
 
 #name{
-	font-size: 20px;
+	font-size: 30px;
 	
 }
-.buttons{
+.button{
 	display: flex;
 	justify-content: center;
 	align-items:center;
+	margin: 0% 2%;
+	border-radius: 50%;
+	width: 75px;
+	height: 75px;
+	font-size: 15px;
+}
+#botton{
+	display: flex;
+	justify-content: center;
+	
 }
 
 #start_stop{
 	background: #292A2F;
 	border: 2px solid green;
-	border-radius: 50%;
-	width: 75px;
-	height: 75px;
 	color: green;
 }
+
 #cut_reset{
 	background: #292A2F;
 	border: 2px solid  gray;
-	border-radius: 50%;
-	width: 75px;
-	height: 75px;
 	color: gray;
 }
-/*
-#mostrar_corte{
-	display: flex;
-	align-items: start;
-	justify-content: space-around;
-	background: #292A2F;
-	color: #969696;
-	height: 100vh;
-	
+
+hr{
+	background: #2C2C2C;
 }
 
-*/
+#num{
+	color: white;
+	justify-content: space-evenly;
+}
+.showNum{
+	display: flex;
+}
 #mostrar_corte {
     display: flex;
     flex-direction: column; 
@@ -82,15 +88,39 @@ body{
     background: #292A2F;
     color: #969696;
     height: 100%;
-    padding: 0px; 
+    font-size: 20px;
 }
 
 #mostrar_corte span {
     margin: 5px 0; 
 }
-#each-cut{
+
+#each_cut{
 	display: flex;
-	justify-content: space-between;
-	width: 50%;
+	justify-content: space-evenly;
+	width: 100%;
+}
+.corte_par{
+	background: #1F1F1F;
+}
+.corte_impar {
+	background: #292A2F;
 }
 
+@media (max-width: 600px) {
+	#name{
+		font-size: 15px;
+	}
+	#tempo{
+		font-size: 35px;
+	}
+	.button{
+		border-radius: 50%;
+		width: 55px;
+		height: 55px;
+		font-size: 10px;
+	}
+	#mostrar_corte{
+		font-size: 15px;
+	}
+}

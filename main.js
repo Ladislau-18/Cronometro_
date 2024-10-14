@@ -29,7 +29,7 @@ function startTimer() {
                 seconds = 0;
                 minutes++;
             }
-            corte = tempo.textContent = `${formatTime(minutes)}:${formatTime(seconds)}:${formatTime(milesseconds)}`;
+            corte = tempo.textContent = `${formatTime(minutes)}:${formatTime(seconds)}.${formatTime(milesseconds)}`;
         }, 10);
     }
 }
@@ -37,16 +37,18 @@ function startTimer() {
 function capturar() {
     if (cut_reset.disabled == false && running == true) {
         mostrar();
+        document.querySelector("#num").classList.add("showNum")
     } else {
         resetTimer();
     }
 }
 
-function mostrar() {
+	function mostrar() {
     storage_cut.push(corte);
     mostrar_corte.innerHTML = ""; 
     storage_cut.forEach((item, index) => {
-        mostrar_corte.innerHTML += `<div id="each-cut">
+        let classe = (index % 2 === 0) ? 'corte_par' : 'corte_impar';
+        mostrar_corte.innerHTML += `<div id="each_cut" class="${classe}">
         <span>#${index + 1}</span><span>${item}</span>
         </div>`;
     });
@@ -62,7 +64,9 @@ function resetTimer() {
     cut_reset.disabled = true;
     storage_cut = []; 
     mostrar_corte.innerHTML = "";
-    tempo.textContent = "00:00:00";
+    tempo.textContent = "00:00.00";
+    document.querySelector("#num").classList.remove("showNum")
+
 }
 
 function formatTime(time) {
