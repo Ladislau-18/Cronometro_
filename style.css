@@ -62,18 +62,10 @@ body{
 	height: 75px;
 	color: gray;
 }
-/*
-#mostrar_corte{
-	display: flex;
-	align-items: start;
-	justify-content: space-around;
-	background: #292A2F;
-	color: #969696;
-	height: 100vh;
-	
-}
 
-*/
+hr{
+	background: #2C2C2C;
+}
 #mostrar_corte {
     display: flex;
     flex-direction: column; 
@@ -82,20 +74,21 @@ body{
     background: #292A2F;
     color: #969696;
     height: 100%;
-    padding: 0px; 
+    
 }
 
 #mostrar_corte span {
     margin: 5px 0; 
 }
+
 #each_cut{
 	display: flex;
 	justify-content: space-evenly;
 	width: 100%;
 }
 .corte_par{
-	background: #292A2F;
+	background: #1F1F1F;
 }
 .corte_impar {
-	background: #515152;
+	background: #292A2F;
 }

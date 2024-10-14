@@ -29,7 +29,7 @@ function startTimer() {
                 seconds = 0;
                 minutes++;
             }
-            corte = tempo.textContent = `${formatTime(minutes)}:${formatTime(seconds)}:${formatTime(milesseconds)}`;
+            corte = tempo.textContent = `${formatTime(minutes)}:${formatTime(seconds)}.${formatTime(milesseconds)}`;
         }, 10);
     }
 }
@@ -63,7 +63,7 @@ function resetTimer() {
     cut_reset.disabled = true;
     storage_cut = []; 
     mostrar_corte.innerHTML = "";
-    tempo.textContent = "00:00:00";
+    tempo.textContent = "00:00.00";
 }
 
 function formatTime(time) {
